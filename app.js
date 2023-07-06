@@ -1,19 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const jokeContainer = document.getElementById('joke-container');
-    const randomJokeBtn = document.getElementById('random-joke-btn');
+    const getJokesButton = document.getElementById('get-jokes-btn');
   
-    randomJokeBtn.addEventListener('click', getRandomJoke);
-  });
-  async function getRandomJoke() {
-    try {
-      const response = await fetch('https://api.example.com/jokes/random');
+    // Event listener for clicking the "Get Jokes" button
+    getJokesButton.addEventListener('click', async () => {
+      // Fetch jokes from the API
+      const response = await fetch('https://api.example.com/jokes');
       const data = await response.json();
-      const jokeContainer = document.getElementById('joke-container');
   
-      if (jokeContainer) {
-        jokeContainer.innerHTML = data.joke;
-      }
-    } catch (error) {
-      console.error('Error fetching joke:', error);
-    }
-  }
+      // Clear the joke container
+      jokeContainer.innerHTML = '';
+  
+      // Display the jokes
+      data.forEach(joke => {
+        const jokeElement = document.createElement('p');
+        jokeElement.textContent = joke.text;
+        jokeContainer.appendChild(jokeElement);
+      });
+    });
+  });
