@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for clicking the "Get Jokes" button
     getJokesButton.addEventListener('click', async () => {
       // Fetch jokes from the API
-      const response = await fetch('https://api.example.com/jokes');
+      const response = await fetch('https://official-joke-api.appspot.com/random_joke');
       const data = await response.json();
   
       // Clear the joke container
