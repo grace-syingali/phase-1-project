@@ -1,11 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color:whitesmoke;
+  background-color:yellow;
   margin: 0;
   padding: 0;
-  background-image : url('images/download.jpeg');
-  background-size : cover;
-  background-repeat : no-repeat;
 
 }
 
@@ -46,7 +43,7 @@ img {
 }
 
 #random-joke-btn:hover {
-  background-color: #0f9d58;
+  background-color: pink;
 }
 .comment {
     width: 40%;
