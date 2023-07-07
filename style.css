@@ -3,6 +3,10 @@ body {
   background-color:whitesmoke;
   margin: 0;
   padding: 0;
+  background-image : url('images/download.jpeg');
+  background-size : cover;
+  background-repeat : no-repeat;
+
 }
 
 header {
