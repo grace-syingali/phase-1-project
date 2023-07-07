@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const jokeContainer = document.getElementById('joke-container');
     const getJokesButton = document.getElementById('get-jokes-btn');
+    const categorySelect = document.getElementById('category-select');
   
     // Event listener for clicking the "Get Jokes" button
+    
     document.querySelector('#random-joke-btn').addEventListener('click', () => {
       // Fetch jokes from the API
+      document.querySelector('#joking').innerHTML ='';
       document.querySelector('#joker').innerHTML = '';
     fetch('https://official-joke-api.appspot.com/random_joke')
     .then(res=>res.json())
