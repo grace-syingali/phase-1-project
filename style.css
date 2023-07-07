@@ -52,4 +52,10 @@ img {
     font: 1.4em/1.6em cursive;
     color: #095484;
   }
+  @media only screen and (max-width: 600px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
   
