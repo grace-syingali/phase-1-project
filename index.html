@@ -13,8 +13,8 @@
     </header>
 
     <div id="joke-container">
-      
-      <div>
+
+      <div id="joking">
         <label for="category-select">Select a Joke Category:</label>
         <select id="category-select">
           <option value="general">General</option>
@@ -39,7 +39,14 @@
       <!-- Comments will be displayed here -->
     </div>
     
+    <h3>Submit Your Own Joke</h3>
+  <form id="joke-form">
+    <input type="text" id="joke-input" placeholder="Enter your joke" required>
+    <button type="submit">Submit</button>
+  </form>
   
     <script src="app.js" defer></script>
+    
+
   </body>
 </html>
